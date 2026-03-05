@@ -34,7 +34,7 @@ export function LendingManagementScreen() {
         {/* Title section */}
         <View style={styles.titleSection}>
           <Text style={styles.title}>
-            Ana, você está em dia com seus 2 empréstimos
+            Ana, você está em dia com seu empréstimo
           </Text>
         </View>
 
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.x6,
   },
   title: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 28,
     lineHeight: 34,
     letterSpacing: -0.84,

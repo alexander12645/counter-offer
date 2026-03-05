@@ -20,6 +20,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     'NuSansText-Regular': require('./src/assets/fonts/NuSans/NuSansText-Regular.otf'),
     'NuSansText-Medium': require('./src/assets/fonts/NuSans/NuSansText-Medium.otf'),
+    'NuSansText-Semibold': require('./src/assets/fonts/NuSans/NuSansText-Semibold.otf'),
   });
 
   const onLayoutRootView = useCallback(async () => {

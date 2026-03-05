@@ -92,12 +92,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   nuLogoText: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 16,
     color: '#FFFFFF',
   },
   headerLabel: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 11,
     letterSpacing: 2,
     color: 'rgba(255,255,255,0.6)',
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     paddingTop: 120,
   },
   title: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 32,
     lineHeight: 38,
     letterSpacing: -0.64,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface.subtle,
   },
   cardBadgeText: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 11,
     letterSpacing: 1,
     color: '#820AD1',
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     color: colors.content.disabled,
   },
   cardTitle: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 20,
     lineHeight: 24,
     color: colors.content.default,
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
   prdLinkText: {
     flex: 1,
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 15,
     color: colors.accent.primary,
   },

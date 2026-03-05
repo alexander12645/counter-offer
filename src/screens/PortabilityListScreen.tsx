@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   avatarLetter: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 18,
     color: '#FFFFFF',
   },

@@ -1,6 +1,7 @@
 export const fontFamily = {
   regular: 'NuSansText-Regular',
   medium: 'NuSansText-Medium',
+  semibold: 'NuSansText-Semibold',
 } as const;
 
 export const colors = {
@@ -71,7 +72,7 @@ export const radii = {
 export const typography = {
   title: {
     small: {
-      fontFamily: fontFamily.medium,
+      fontFamily: fontFamily.semibold,
       fontSize: 26,
       lineHeight: 31,
       letterSpacing: -0.52,
@@ -80,7 +81,7 @@ export const typography = {
   subtitle: {
     small: {
       strong: {
-        fontFamily: fontFamily.medium,
+        fontFamily: fontFamily.semibold,
         fontSize: 17,
         lineHeight: 22,
         letterSpacing: -0.17,
@@ -100,7 +101,7 @@ export const typography = {
   label: {
     xsmall: {
       strong: {
-        fontFamily: fontFamily.medium,
+        fontFamily: fontFamily.semibold,
         fontSize: 13,
         lineHeight: 17,
         letterSpacing: 0,
@@ -115,7 +116,7 @@ export const typography = {
       letterSpacing: -0.15,
     },
     strong: {
-      fontFamily: fontFamily.medium,
+      fontFamily: fontFamily.semibold,
       fontSize: 15,
       lineHeight: 20,
       letterSpacing: -0.15,
@@ -129,7 +130,7 @@ export const typography = {
       letterSpacing: -0.17,
     },
     strong: {
-      fontFamily: fontFamily.medium,
+      fontFamily: fontFamily.semibold,
       fontSize: 17,
       lineHeight: 22,
       letterSpacing: -0.17,

@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     right: '30%',
   },
   title: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 24,
     lineHeight: 29,
     letterSpacing: -0.48,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.x6,
   },
   bold: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     color: colors.content.default,
   },
   diamondRow: {
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.x3,
   },
   primaryButtonText: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 16,
     color: '#FFFFFF',
   },
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.full,
   },
   secondaryButtonText: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 16,
     color: colors.content.default,
   },

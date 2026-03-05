@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     gap: spacing.x5,
   },
   greeting: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 20,
     lineHeight: 24,
     color: '#FFFFFF',
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.x1,
   },
   sectionTitle: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 20,
     lineHeight: 26,
     letterSpacing: -0.2,
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.x2,
   },
   sectionAmount: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 24,
     lineHeight: 30,
     color: colors.content.default,
@@ -224,15 +224,13 @@ const styles = StyleSheet.create({
     marginTop: spacing.x2,
   },
   balanceAmount: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 24,
     lineHeight: 30,
     color: colors.content.default,
     marginTop: spacing.x2,
   },
   shortcutsContainer: {
-    borderTopWidth: 1,
-    borderTopColor: colors.border.default,
   },
   shortcutsScroll: {
     paddingHorizontal: spacing.x6,
@@ -263,12 +261,12 @@ const styles = StyleSheet.create({
     marginTop: -8,
   },
   shortcutBadgeText: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 10,
     color: '#FFF',
   },
   shortcutLabel: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
     fontSize: 13,
     lineHeight: 17,
     color: colors.content.default,
@@ -318,7 +316,7 @@ const styles = StyleSheet.create({
     color: colors.content.default,
   },
   bannerBold: {
-    fontFamily: fontFamily.medium,
+    fontFamily: fontFamily.semibold,
   },
   bannerIconContainer: {
     width: 56,
