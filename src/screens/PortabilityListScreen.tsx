@@ -46,7 +46,7 @@ export function PortabilityListScreen() {
             </View>
 
             <View style={styles.content}>
-              <Text style={styles.loanName}>Consignado Sicredi</Text>
+              <Text style={styles.loanName}>Portabilidade de "Dinheiro de empréstimo"</Text>
               <Text style={styles.loanStatus}>Recebemos seu pedido</Text>
             </View>
 

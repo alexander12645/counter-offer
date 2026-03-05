@@ -151,6 +151,8 @@ const styles = StyleSheet.create({
   secondaryButton: {
     paddingVertical: 14,
     alignItems: 'center',
+    backgroundColor: colors.surface.subtle,
+    borderRadius: radii.full,
   },
   secondaryButtonText: {
     fontFamily: fontFamily.medium,

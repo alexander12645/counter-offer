@@ -72,18 +72,18 @@ export const typography = {
   title: {
     small: {
       fontFamily: fontFamily.medium,
-      fontSize: 24,
-      lineHeight: 29,       // 24 * 1.2
-      letterSpacing: -0.48,  // 24 * -0.02
+      fontSize: 26,
+      lineHeight: 31,
+      letterSpacing: -0.52,
     },
   },
   subtitle: {
     small: {
       strong: {
         fontFamily: fontFamily.medium,
-        fontSize: 16,
-        lineHeight: 21,       // 16 * 1.3
-        letterSpacing: -0.16,  // 16 * -0.01
+        fontSize: 17,
+        lineHeight: 22,
+        letterSpacing: -0.17,
       },
     },
   },
@@ -91,9 +91,9 @@ export const typography = {
     small: {
       default: {
         fontFamily: fontFamily.regular,
-        fontSize: 14,
-        lineHeight: 21,       // 14 * 1.5
-        letterSpacing: -0.14,  // 14 * -0.01
+        fontSize: 15,
+        lineHeight: 22,
+        letterSpacing: -0.15,
       },
     },
   },
@@ -101,8 +101,8 @@ export const typography = {
     xsmall: {
       strong: {
         fontFamily: fontFamily.medium,
-        fontSize: 12,
-        lineHeight: 16,       // 12 * 1.3
+        fontSize: 13,
+        lineHeight: 17,
         letterSpacing: 0,
       },
     },
@@ -110,29 +110,29 @@ export const typography = {
   labelSmall: {
     default: {
       fontFamily: fontFamily.regular,
-      fontSize: 14,
-      lineHeight: 18,       // 14 * 1.3
-      letterSpacing: -0.14,  // 14 * -0.01
+      fontSize: 15,
+      lineHeight: 20,
+      letterSpacing: -0.15,
     },
     strong: {
       fontFamily: fontFamily.medium,
-      fontSize: 14,
-      lineHeight: 18,       // 14 * 1.3
-      letterSpacing: -0.14,  // 14 * -0.01
+      fontSize: 15,
+      lineHeight: 20,
+      letterSpacing: -0.15,
     },
   },
   labelMedium: {
     default: {
       fontFamily: fontFamily.regular,
-      fontSize: 16,
-      lineHeight: 21,       // 16 * 1.3
-      letterSpacing: -0.16,  // 16 * -0.01
+      fontSize: 17,
+      lineHeight: 22,
+      letterSpacing: -0.17,
     },
     strong: {
       fontFamily: fontFamily.medium,
-      fontSize: 16,
-      lineHeight: 21,       // 16 * 1.3
-      letterSpacing: -0.16,  // 16 * -0.01
+      fontSize: 17,
+      lineHeight: 22,
+      letterSpacing: -0.17,
     },
   },
 } as const;
