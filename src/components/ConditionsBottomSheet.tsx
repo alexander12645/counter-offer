@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { BottomSheet } from './BottomSheet';
 import { colors, spacing, fontFamily, typography, radii } from '../theme/tokens';
@@ -25,15 +25,11 @@ export function ConditionsBottomSheet({
 
         {/* Illustration */}
         <View style={styles.illustration}>
-          <View style={styles.illustrationCircle}>
-            <Ionicons name="calculator-outline" size={36} color="#820AD1" />
-            <View style={styles.percentBadge}>
-              <Ionicons name="trending-down" size={14} color="#FFF" />
-            </View>
-          </View>
-          <View style={styles.checkBadge}>
-            <Ionicons name="checkmark-circle" size={22} color="#2E7D32" />
-          </View>
+          <Image
+            source={require('../../assets/bottom-sheet.png')}
+            style={styles.illustrationImage}
+            resizeMode="contain"
+          />
         </View>
 
         {/* Title */}
@@ -81,33 +77,13 @@ const styles = StyleSheet.create({
     marginLeft: -8,
   },
   illustration: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     marginTop: spacing.x4,
     marginBottom: spacing.x6,
   },
-  illustrationCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: '#F3E5F5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  percentBadge: {
-    position: 'absolute',
-    top: -4,
-    right: -4,
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    backgroundColor: '#820AD1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  checkBadge: {
-    position: 'absolute',
-    top: -2,
-    right: '30%',
+  illustrationImage: {
+    width: 128,
+    height: 128,
   },
   title: {
     fontFamily: fontFamily.semibold,

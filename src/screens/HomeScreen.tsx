@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -7,18 +7,28 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { colors, spacing, fontFamily, typography, radii } from '../theme/tokens';
 import type { RootStackParamList } from '../navigation/types';
+import PixIcon from '../../assets/Action row/outlined/logos/pix.svg';
+import MoneyOutIcon from '../../assets/Action row/outlined/financial/money_out.svg';
+import LendingIcon from '../../assets/Action row/outlined/products/lending.svg';
+import BarCodeIcon from '../../assets/Action row/outlined/financial/bar_code.svg';
+import CoinIcon from '../../assets/Finance/Coin 01.svg';
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
-const SHORTCUTS = [
-  { icon: 'grid-outline' as const, label: 'Pix' },
-  { icon: 'swap-horizontal-outline' as const, label: 'Transferir' },
-  { icon: 'hand-left-outline' as const, label: 'Pegar\nempréstimo', badge: 'R$12.300' },
-  { icon: 'barcode-outline' as const, label: 'Pagar' },
-  { icon: 'arrow-down-outline' as const, label: 'Depositar' },
-  { icon: 'phone-portrait-outline' as const, label: 'Recarga' },
-  { icon: 'chatbubble-outline' as const, label: 'Cobrar' },
-  { icon: 'cash-outline' as const, label: 'Salário' },
+type ShortcutItem = {
+  label: string;
+  badge?: string;
+} & ({ svgIcon: React.FC<import('react-native-svg').SvgProps> } | { ionIcon: keyof typeof Ionicons.glyphMap });
+
+const SHORTCUTS: ShortcutItem[] = [
+  { svgIcon: PixIcon, label: 'Pix' },
+  { svgIcon: MoneyOutIcon, label: 'Transferir' },
+  { svgIcon: LendingIcon, label: 'Pegar\nempréstimo', badge: 'R$12.300' },
+  { svgIcon: BarCodeIcon, label: 'Pagar' },
+  { ionIcon: 'arrow-down-outline', label: 'Depositar' },
+  { ionIcon: 'phone-portrait-outline', label: 'Recarga' },
+  { ionIcon: 'chatbubble-outline', label: 'Cobrar' },
+  { ionIcon: 'cash-outline', label: 'Salário' },
 ];
 
 export function HomeScreen() {
@@ -68,7 +78,11 @@ export function HomeScreen() {
             <View key={i} style={styles.shortcutItem}>
               <View style={styles.shortcutCircleWrapper}>
                 <View style={styles.shortcutCircle}>
-                  <Ionicons name={s.icon} size={26} color={colors.content.default} />
+                  {'svgIcon' in s ? (
+                    <s.svgIcon width={26} height={26} color={colors.content.default} />
+                  ) : (
+                    <Ionicons name={s.ionIcon} size={26} color={colors.content.default} />
+                  )}
                 </View>
                 {s.badge && (
                   <View style={styles.shortcutBadge}>
@@ -99,9 +113,7 @@ export function HomeScreen() {
               </Text>
             </View>
             <View style={styles.bannerIconContainer}>
-              <View style={styles.bannerCoin}>
-                <Ionicons name="logo-usd" size={16} color="#FFF" />
-              </View>
+              <CoinIcon width={32} height={32} />
             </View>
           </View>
           <View style={styles.dotsRow}>
@@ -324,19 +336,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  bannerCoin: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: '#4CAF50',
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#2E7D32',
-    shadowOffset: { width: 2, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 3,
-  },
+  
   dotsRow: {
     flexDirection: 'row',
     alignItems: 'center',

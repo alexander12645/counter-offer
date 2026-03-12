@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -9,6 +9,7 @@ import { NavigationTopBar } from '../components/NavigationTopBar';
 import { Badge } from '../components/Badge';
 import { colors, spacing, fontFamily, typography, radii } from '../theme/tokens';
 import type { RootStackParamList } from '../navigation/types';
+const ConsignadoIcon = require('../../assets/consignado-em-dia.png');
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'LendingManagement'>;
 
@@ -44,9 +45,7 @@ export function LendingManagementScreen() {
             <Text style={styles.cardListTitle}>Meus empréstimos contratados</Text>
 
             <View style={styles.loanRow}>
-              <View style={styles.loanAvatar}>
-                <Ionicons name="business-outline" size={22} color={colors.content.subtle} />
-              </View>
+              <Image source={ConsignadoIcon} style={styles.loanAvatar} resizeMode="contain" />
 
               <View style={styles.loanContent}>
                 <Text style={styles.loanTitle}>Consignado · R$113,16/mês</Text>
@@ -128,12 +127,8 @@ const styles = StyleSheet.create({
     gap: spacing.x4,
   },
   loanAvatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: colors.surface.subtle,
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: 48,
+    height: 48,
   },
   loanContent: {
     flex: 1,
